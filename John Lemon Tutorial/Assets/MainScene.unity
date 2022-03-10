@@ -148,8 +148,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145451216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9517517, y: 0.19405603, z: 2.445786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1229245626}
@@ -371,8 +371,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178889796}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9517517, y: 0.19405603, z: 2.445786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1229245626}
@@ -4550,7 +4550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229245625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9517517, y: -0.19405603, z: -2.445786}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 178889798}
@@ -4700,8 +4700,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392158181}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9517517, y: 0.19405603, z: 2.445786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1229245626}
@@ -5108,9 +5108,9 @@ MonoBehaviour:
   displayImageDuration: 1
   player: {fileID: 1869058226}
   exitBackgroundImageCanvasGroup: {fileID: 1398437288}
-  exitAudio: {fileID: 0}
+  exitAudio: {fileID: 1392158183}
   caughtBackgroundImageCanvasGroup: {fileID: 2074903872}
-  caughtAudio: {fileID: 0}
+  caughtAudio: {fileID: 145451218}
 --- !u!65 &1705373196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5265,7 +5265,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1987767084}
   - component: {fileID: 1987767083}
-  - component: {fileID: 1987767082}
   - component: {fileID: 1987767085}
   - component: {fileID: 1987767086}
   m_Layer: 0
@@ -5275,14 +5274,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1987767082
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987767081}
-  m_Enabled: 1
 --- !u!20 &1987767083
 Camera:
   m_ObjectHideFlags: 0
