@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         m_AudioSource = GetComponent<AudioSource> ();
     }
 
-    void FixedUpdate ()
+    void FixedUpdate()
     {
         float horizontal = Input.GetAxis ("Horizontal");
         float vertical = Input.GetAxis ("Vertical");
