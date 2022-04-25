@@ -7,21 +7,24 @@ public class ghostScript : MonoBehaviour {
 
 private NavMeshAgent Mob;
 public GameObject Player;
-
 public float MobDistanceRun = 4.0f;
 
-void Start()
-{
-    Mob = GetComponent<NavMeshAgent>();
-}
-void Update()
-{
-    float distance = Vector3.Distance(transform.position, Player.transform.position);
-    if (distance < MobDistanceRun)
+	void Start () {
+        Mob = GetComponent<NavMeshAgent>();
+        if (Player == null)
+            Player = GameObject.FindGameObjectWithTag("Player");
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        //this is for updating the target location
+        Mob.destination = Player.transform.position;
+	}
+
+    //function to detect when the ghost gets the player
+    public void OnCollisionEnter(Collision collision)
     {
-        Vector3 dirToPlayer = transform.position - Player.transform.position;
-        Vector3 newPos = transform.position = dirToPlayer;
-        Mob.SetDestination(newPos);
+        if (collision.gameObject.tag == "Player")
+            SceneManager.LoadScene("menu");
     }
-}
 }
