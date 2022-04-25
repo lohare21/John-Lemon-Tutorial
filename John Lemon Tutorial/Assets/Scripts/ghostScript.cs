@@ -7,7 +7,6 @@ public class ghostScript : MonoBehaviour {
 
 private NavMeshAgent Mob;
 public GameObject Player;
-public float MobDistanceRun = 4.0f;
 
 	void Start () {
         Mob = GetComponent<NavMeshAgent>();
