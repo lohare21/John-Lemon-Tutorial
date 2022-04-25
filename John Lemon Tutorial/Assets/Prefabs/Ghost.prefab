@@ -933,6 +933,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointOfView
       objectReference: {fileID: 0}
+    - target: {fileID: 3757261167848077536, guid: 96af606e3ad3ca74d8b2b1eb6b330db5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4212596100121387045, guid: 96af606e3ad3ca74d8b2b1eb6b330db5,
         type: 3}
       propertyPath: m_RootOrder
