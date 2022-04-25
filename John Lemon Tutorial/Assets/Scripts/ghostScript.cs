@@ -7,6 +7,8 @@ public class ghostScript : MonoBehaviour {
 
 private NavMeshAgent Mob;
 public GameObject Player;
+public float MobDistanceRun = 4.0f;
+
 	void Start () {
         Mob = GetComponent<NavMeshAgent>();
         if (Player == null)
@@ -15,6 +17,7 @@ public GameObject Player;
 	
 	// Update is called once per frame
 	void Update () {
+        //this is for updating the target location
         Mob.destination = Player.transform.position;
 	}
 
