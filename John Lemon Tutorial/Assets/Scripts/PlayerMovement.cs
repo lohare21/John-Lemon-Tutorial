@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 50f;
     public TextMeshProUGUI countText;
+    public float displayDuration = 1f;
+     float m_Timer;
 	public GameObject winTextObject;
-
+    public float fadeDuration = 1f;
     private Rigidbody _rigidbody;
     private int count;
     private Rigidbody rb;
@@ -34,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 		SetCountText ();
 
                 // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
-                winTextObject.SetActive(false);
+                winTextObject.SetActive (false);
     }
     void FixedUpdate ()
     {
@@ -109,6 +111,9 @@ public class PlayerMovement : MonoBehaviour
 		{
                     // Set the text value of your 'winText'
                     winTextObject.SetActive(true);
-		}
+         }
+
     }
 }
+
+
