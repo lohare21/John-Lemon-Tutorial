@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 50f;
+    public TextMeshProUGUI countText;
+	public GameObject winTextObject;
+
     private Rigidbody _rigidbody;
+    private int count;
+    private Rigidbody rb;
     Animator m_Animator;
     Rigidbody m_Rigidbody;
     AudioSource m_AudioSource;
@@ -18,9 +24,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Start ()
     {
+        rb = GetComponent<Rigidbody>();
         m_Animator = GetComponent<Animator> ();
         m_Rigidbody = GetComponent<Rigidbody> ();
         m_AudioSource = GetComponent<AudioSource> ();
+
+        count = 0;
+
+		SetCountText ();
+
+                // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
+                winTextObject.SetActive(false);
     }
     void FixedUpdate ()
     {
@@ -75,5 +89,26 @@ public class PlayerMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false);
         }
+		
+        if (other.gameObject.CompareTag ("PickUp"))
+		{
+			other.gameObject.SetActive (false);
+
+			// Add one to the score variable 'count'
+			count = count + 1;
+
+			// Run the 'SetCountText()' function (see below)
+			SetCountText ();
+        }
+    }
+    void SetCountText()
+	{
+		countText.text = "Score: " + count.ToString();
+
+		if (count >= 176) 
+		{
+                    // Set the text value of your 'winText'
+                    winTextObject.SetActive(true);
+		}
     }
 }

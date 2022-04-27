@@ -49,7 +49,6 @@ public class GameEnding : MonoBehaviour
         {
             audioSource.Play();
             m_HasAudioPlayed = true;
-        }
             
         m_Timer += Time.deltaTime;
         imageCanvasGroup.alpha = m_Timer / fadeDuration;
@@ -65,5 +64,6 @@ public class GameEnding : MonoBehaviour
                 Application.Quit ();
             }
         }
+    }
     }
 }
